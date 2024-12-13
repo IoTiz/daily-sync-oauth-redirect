@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OAuth Redirect</title>
+</head>
+<body>
+    <script>
+        // URL에서 코드 추출
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        
+        // 앱 스키마로 리다이렉트
+        window.location.href = `DailySync://oauth?code=${code}`;
+    </script>
+</body>
+</html>
