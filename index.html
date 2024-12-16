@@ -5,12 +5,13 @@
 </head>
 <body>
     <script>
-        // URL에서 코드 추출
+        // URL에서 코드와 상태 추출
         const urlParams = new URLSearchParams(window.location.search);
         const code = urlParams.get('code');
+        const state = urlParams.get('state');
         
-        // 앱 스키마로 리다이렉트
-        window.location.href = `dailysync://login?code=${code}`;
+        // 앱 스키마로 리다이렉트 (state도 함께 전달)
+        window.location.href = `dailysync://login?code=${code}&state=${state}`;
     </script>
     <h1>redirecting...</h1>
 </body>
